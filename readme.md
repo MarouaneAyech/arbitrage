@@ -32,7 +32,7 @@ Go to `http://localhost/wordpress/wp-login.php` and authenticate
 - Run commandline :
 `git clone https://github.com/MarouaneAyech/arbitrage.git`
 
-## On Wordpress, import features
+## Import the existing features of the theme
 - Go to `Outils->Importer->Wordpress`
 - Click on `Installer`
 - Click on `Lancer l'outil d'importation`
