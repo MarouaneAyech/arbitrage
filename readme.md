@@ -29,5 +29,10 @@ Go to `http://localhost/wordpress/wp-login.php` and authenticate
 ## Clone the customized theme
 - Go to `C:\wamp64\www\wordpress\wp-content\themes`
 - Clone the repo of customized theme:
-- Rum :
+- Run commandline :
 `git clone https://github.com/MarouaneAyech/arbitrage.git`
+
+## On Wordpress, import features
+- Go to `Outils->Importer->Wordpress`
+- Click on `Installer`
+- Click on `Lancer l'outil d'importation`
