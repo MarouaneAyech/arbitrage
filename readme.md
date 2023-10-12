@@ -36,3 +36,4 @@ Go to `http://localhost/wordpress/wp-login.php` and authenticate
 - Go to `Outils->Importer->Wordpress`
 - Click on `Installer`
 - Click on `Lancer l'outil d'importation`
+- Choose the file `aima.WordPress.2023-10-12.xml` that contains existing features
