@@ -15,6 +15,7 @@
         .navbar-nav .nav-item {
             flex: 1;
             text-align: left;
+            white-space: nowrap;
         }
 
         .navbar-nav li:hover > ul.sub-menu {
@@ -138,13 +139,22 @@
                     ?>
                 </div>
                 <!-- Les boutons à droite-->
-                <div style="flex: 70%; text-align: right;">
-                <?php $custom_buttons = get_option('custom_buttons', array());
-                foreach ($custom_buttons as $button_text) {
-                    echo '<button class="bouton-ovale" style="padding: bottom 7px;"><a style="color: #fff;" href="#">' . esc_html($button_text) . '</a></buton>';
-                } ?>
-                </div>
 
+                <div style="flex: 70%; text-align: right;">
+                <?php 
+                    $custom_buttons = get_option('custom_buttons', array());
+                    $custom_pages = get_option('custom_pages', array()); // Supposons que vous ayez un tableau similaire pour les pages.
+
+                    foreach ($custom_buttons as $index => $button_text) {
+                        $page_id = $custom_pages[$index]; // Obtenez l'ID de la page associée.
+                        $page_url = get_permalink($page_id); // Obtenez l'URL de la page à partir de l'ID.
+
+                        echo '<form method="post" action="' . $page_url . '" style="display: inline-block; margin-right: 10px;">';
+                        echo '<button type="submit" class="bouton-ovale" style="padding: bottom 7px;">' . esc_html($button_text) . '</button>';
+                        echo '</form>';
+                    }
+                ?>
+                </div>
             </div>
 
         <!-- </div> -->
@@ -160,12 +170,13 @@
                                 'container'         => 'div',
                                 'container_class'   => 'collapse navbar-collapse container-fluid',
                                 'container_id'      => 'bs-example-navbar-collapse-1',
-                                'menu_class'        => 'nav navbar-nav mx-auto',
+                                'menu_class'        => 'navbar-nav mx-auto',
                                 'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                                 'walker'            => new WP_Bootstrap_Navwalker(),
                             ) );
                         ?>
                 </div>
+                <!-- 'menu_class'        => 'nav navbar-nav mx-auto', -->
             </nav>
         </div>
     

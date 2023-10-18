@@ -10,7 +10,7 @@
         background-repeat: no-repeat; 
         background-position: center; 
         background-size: cover; 
-        min-height: 600px;
+        min-height: 800px;
     }
     .band-text {
         font-family: 'gabriola', sans-serif !important;
@@ -49,10 +49,10 @@
             </div>
         <!-- </div> -->
 
-        <div class="fixtab">
-            <a href="https://biamcacademy.com/" target="_blank">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/logo_aima_small.png" width="100%" height="100%">
-            <p class="m-0" style="text-align: center; margin-bottom: 30px;">AIMA</p>
+        <div class="fixtab" style="height: 100px; width: 200px;">
+            <a href="<?php echo esc_url(home_url('/')); ?>"> 
+            <img src="<?php echo get_template_directory_uri(); ?>/images/logo IiMA_small.png" width="100%" height="100%">
+            <!-- <p class="m-0" style="text-align: center; margin-bottom: 30px;">IIMA</p> -->
             </a>
         </div>
 
